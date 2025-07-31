@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Story template</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link href="scrolly-styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-rendering: optimizeLegibility;
+        }
+        .content {
+            max-width: 640px;
+            margin: auto;
+        }
+        .header {
+            padding: 3em 0;
+        }
+        a {
+            color: #f05349;
+        }
+        .footer {
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: 4em;
+            padding: 4em 0;
+        }
+        figure {
+            margin: 0;
+            padding-bottom: 1.2em;
+        }
+        figcaption {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 0.5em;
+            color: #666;
+        }
+        h1 {
+            font-family: 'Lora', Georgia, serif;
+            font-weight: bold;
+            font-size: 3em;
+            line-height: 1.1;
+        }
+        .subhead {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .full-width figure {
+            text-align: center;
+        }
+        iframe, img, video {
+            max-width: 100%;
+        }
+        p {
+            line-height: 1.6;
+            margin: 0;
+            padding-bottom: 1.2em;
+        }
+        ul {
+            margin: 0;
+            padding-bottom: 1em;
+            line-height: 1.6;
+        }
+        iframe {
+            padding-bottom: 1.2em;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            background: #fff880;
+        }
+        @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+        .with-video-bg {
+            position: relative;
+            background-size: cover;
+            margin-bottom: 2em;
+            min-height: 70svh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0px 0px 30px black, 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .video-background video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+.step {
+    margin-bottom: 70vh;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+        .step p {
+        background: transparent !important;
+        padding: 0;
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+ <div class="header with-video-bg">
+    <div class="video-background">
+        <video src="/Project3_Lede/Header_Video.webm" preload="auto" tabindex="0" playsinline autoplay loop muted></video>
+    </div>
+</div>
+
+<div class="content">
+    <div class="header">
+        <h1>The bridge</h1>
+        <p class="subhead">
+            China continues to astonish the world with the speed of its infrastructure development. While bridge projects in Germany often take decades to complete, similar structures in China are finished within weeks or months. What is its secret? One new bridge along the Yellow River helps to understand China's ambition.</p>
+        </div>
+        <div class="byline">
+            <p>By Lea Löwenzahn</p>
+        </div>
+        <p>Where the Yellow River drifts broad and brown across the plains of Shandong, a structure now rises that seems strangely out of place. Two concrete towers pierce the sky above the riverbed. In China, they’re already calling it the “first great leap” across the Yellow River.</p>
+    </div>
+
+<section id="scrolly-images" class="scrolly-container">
+  <div class="sticky-thing">
+    <img src="bruecke_1.jpeg" id="scrolly-image">
+  </div>
+  <div class="steps-container">
+    <div class="step step-1" id="step1">
+       <p>Construction crews began assembling the Dongying Huanghe Road-Rail Bridge in 2022. Beneath its steel and cable structure lies a quiet symbolism: this bridge is not just connecting cities, it’s connecting ambitions.</p>
+    </div>
+    <div class="step step-1" id="step2">
+      <p>The 203-meter-high main tower makes it the tallest bridge across the Yellow River and the highest combined road-rail bridge in northern China.</p>
+    </div>
+  </div>
+</section>
+
+<section id="scrolly-images-2" class="scrolly-container">
+
+<div class="content">
+    <p>In recent years, China has not only expanded its high-speed rail network but also invested heavily in infrastructure projects to connect remote regions with urban centers.</p>
+    <p>The red line shows the current high-speed rail tracks in the region. For years, Dongying and Binzhou, two key industrial cities in northern Shandong, were left without a direct link to the network. While other cities nearby grew, Dongying and Binzhou remained reliant on slower, conventional trains and highways.</p>
+</div>
+    
+  <div class="sticky-thing">
+    <img src="existingtracks1.png" id="scrolly-image-2">
+  </div>
+  <div class="steps-container">
+    <div class="step step-2" id="step3">
+      <p>The new Jinwei High-Speed Railway promises to change that. The Dongying Huanghe Road-Rail Bridge is a promise for a better future. </p>
+    </div>
+    <div class="step step-2" id="step4">
+      <p>What makes this crossing exceptional is its dual purpose: a two-level design carrying both road and rail across one of the most sediment-laden rivers in the world.</p>
+    </div>
+  </div>
+</section>
+    <div class="content">
+        <p>If all goes according to schedule, bullet trains will cross the river here by late 2026. For the residents it will mark the beginning of a different rhythm. And perhaps, for a moment, the Yellow River will seem just a little less wide.</p>
+    </div>
+
+<script>
+    (() => {
+        const scroller = scrollama();
+
+        scroller
+            .setup({
+                parent: document.querySelector("#scrolly-images"),
+                step: ".step-1",
+                offset: 0.6,
+            })
+            .onStepEnter(function ({ element, index, direction }) {
+                const event = new CustomEvent("stepin", { detail: { direction: direction } });
+                element.dispatchEvent(event);
+            })
+            .onStepExit(function ({ element, index, direction }) {
+                const event = new CustomEvent("stepout", { detail: { direction: direction } });
+                if (direction === "up" && element.previousElementSibling) {
+                    const event = new CustomEvent("stepin", { detail: { direction: direction } });
+                    element.previousElementSibling.dispatchEvent(event);
+                }
+            });
+
+        window.addEventListener("resize", scroller.resize);
+    })();
+
+    d3.select("#step1").on('stepin', (e) => {
+        d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "bruecke_1.jpeg");
+    });
+
+    d3.select("#step2").on('stepin', (e) => {
+        d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "bruecke_2.png");
+    });
+
+    (() => {
+        const scroller2 = scrollama();
+
+        scroller2
+            .setup({
+                parent: document.querySelector("#scrolly-images-2"),
+                step: ".step-2",
+                offset: 0.6,
+            })
+            .onStepEnter(function ({ element, index, direction }) {
+                const event = new CustomEvent("stepin", { detail: { direction: direction } });
+                element.dispatchEvent(event);
+            })
+            .onStepExit(function ({ element, index, direction }) {
+                const event = new CustomEvent("stepout", { detail: { direction: direction } });
+                if (direction === "up" && element.previousElementSibling) {
+                    const event = new CustomEvent("stepin", { detail: { direction: direction } });
+                    element.previousElementSibling.dispatchEvent(event);
+                }
+            });
+
+        window.addEventListener("resize", scroller2.resize);
+    })();
+     d3.select("#step3").on('stepin', (e) => {
+        d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "existingtracks1.png");
+    });
+
+    d3.select("#step4").on('stepin', (e) => {
+        d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "newtracks1.png");
+    });
+</script>
+
+</body>
+</html>
