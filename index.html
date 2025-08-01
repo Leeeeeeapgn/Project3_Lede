@@ -179,25 +179,6 @@
   </div>
 </section>
 
-<section id="scrolly-images-2" class="scrolly-container">
-
-<div class="content">
-    <p>In recent years, China has not only expanded its high-speed rail network but also invested heavily in infrastructure projects to connect remote regions with urban centers.</p>
-    <p>The red line shows the current high-speed rail tracks in the region. For years, Dongying and Binzhou, two key industrial cities in northern Shandong, were left without a direct link to the network. While other cities nearby grew, Dongying and Binzhou remained reliant on slower, conventional trains and highways.</p>
-</div>
-    
-  <div class="sticky-thing">
-    <img src="tailings.jpeg" id="scrolly-image-2">
-  </div>
-  <div class="steps-container">
-    <div class="step step-2" id="step3">
-      <p>The new Jinwei High-Speed Railway promises to change that. The Dongying Huanghe Road-Rail Bridge is a promise for a better future. </p>
-    </div>
-    <div class="step step-2" id="step4">
-      <p>What makes this crossing exceptional is its dual purpose: a two-level design carrying both road and rail across one of the most sediment-laden rivers in the world.</p>
-    </div>
-  </div>
-</section>
     <div class="content">
         <p>If all goes according to schedule, bullet trains will cross the river here by late 2026. For the residents it will mark the beginning of a different rhythm. And perhaps, for a moment, the Yellow River will seem just a little less wide.</p>
     </div>
@@ -233,15 +214,6 @@
 
     d3.select("#step2").on('stepin', (e) => {
         d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "bruecke_2.png");
-    });
-        window.addEventListener("resize", scroller2.resize);
-    })();
-     d3.select("#step3").on('stepin', (e) => {
-        d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "existingtracks1.png");
-    });
-
-    d3.select("#step4").on('stepin', (e) => {
-        d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "newtracks1.png");
     });
 </script>
 
