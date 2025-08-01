@@ -234,28 +234,6 @@
     d3.select("#step2").on('stepin', (e) => {
         d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "bruecke_2.png");
     });
-
-    (() => {
-        const scroller2 = scrollama();
-
-        scroller2
-            .setup({
-                parent: document.querySelector("#scrolly-images-2"),
-                step: ".step-2",
-                offset: 0.6,
-            })
-            .onStepEnter(function ({ element, index, direction }) {
-                const event = new CustomEvent("stepin", { detail: { direction: direction } });
-                element.dispatchEvent(event);
-            })
-            .onStepExit(function ({ element, index, direction }) {
-                const event = new CustomEvent("stepout", { detail: { direction: direction } });
-                if (direction === "up" && element.previousElementSibling) {
-                    const event = new CustomEvent("stepin", { detail: { direction: direction } });
-                    element.previousElementSibling.dispatchEvent(event);
-                }
-            });
-
         window.addEventListener("resize", scroller2.resize);
     })();
      d3.select("#step3").on('stepin', (e) => {
