@@ -117,3 +117,16 @@
         flex-grow: 2;
     }
 }
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+}
+
+.centered-image img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
