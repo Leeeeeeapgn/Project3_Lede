@@ -146,17 +146,20 @@
 .scrolly-container {
     position: relative;
     margin-bottom: 1.2em;
+    min-height: 400vh;
 }
 
 .sticky-thing {
-    flex: 1.2;
     position: sticky;
-    top: 10vh;
+    top: 0;
+    z-index: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .steps-container {
-    max-width: 800px !important;
-    width: 100%;
+    position: relative;
+    z-index: 10;
 }
 
 .step > * {
