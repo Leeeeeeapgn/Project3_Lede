@@ -3,6 +3,7 @@
     margin-bottom: 1.2em;
 }
 
+}
 .sticky-thing {
     position: sticky;
     top: 0;
@@ -95,9 +96,16 @@
 @media only screen and (min-width: 700px) {
     .scrolly-container.side-by-side {
         display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 960px;
+        margin: 0 auto;
+        gap: 2em;
+        padding: 2em 1em;
     }
 
-    .scrolly-container.side-by-side>div {
+    .scrolly-container.side-by-side > div {
         flex-basis: 0;
         flex-grow: 1;
         flex-shrink: 1;
@@ -107,7 +115,6 @@
     .scrolly-container.side-by-side .scrolly-overlay {
         margin-top: 70vh;
         order: 0;
-        /* Change these to adjust sizing options */
         min-width: 15rem;
         max-width: 20rem;
     }
