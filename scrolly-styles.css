@@ -6,25 +6,17 @@
 .sticky-thing {
     position: sticky;
     top: 0;
-    transform: translate(0px, 0px);
     z-index: 0;
-    height: 100svh;
-    width: 100vw;
-    margin: 0;
+    height: 100vh;
+    width: 100%;
     overflow: hidden;
-    /* Center everything inside */
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden; */
 }
 
 .sticky-thing > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;  
+    display: block;
 }
 
 .video-container {
@@ -33,28 +25,12 @@
     z-index: -1;
 }
 
-.scrolly-container video {
-    position: absolute;
-    top: 0;
-    height: auto;
-    width: 100%;
-}
-
-.sticky-thing iframe {
-    position: absolute;
-    top: 0;
-    max-width: 100%;
-    min-height: 100vh;
-}
-
 .steps-container {
-    transform: translate3d(0,0,0);
     position: relative;
-    padding: 0;
     z-index: 10;
-    max-width: 35rem;
+    max-width: 640px;
     margin: 0 auto;
-    padding-bottom: 4em;
+    padding: 2em 1em;
 }
 
 .step {
@@ -87,7 +63,14 @@
     width: 100% !important;
     height: 100% !important;
     object-fit: cover;
-    display: block;  
+    display: block;
+}
+
+.sticky-thing iframe {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    min-height: 100vh;
 }
 
 /* When it's less than 700 pixels wide, do normal scrollytelling */
@@ -97,7 +80,7 @@
         display: flex;
     }
 
-    .scrolly-container.side-by-side>div {
+    .scrolly-container.side-by-side > div {
         flex-basis: 0;
         flex-grow: 1;
         flex-shrink: 1;
@@ -107,7 +90,6 @@
     .scrolly-container.side-by-side .scrolly-overlay {
         margin-top: 70vh;
         order: 0;
-        /* Change these to adjust sizing options */
         min-width: 15rem;
         max-width: 20rem;
     }
@@ -119,14 +101,14 @@
 }
 
 .centered-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
 }
 
 .centered-image img {
-  max-width: 90%;
-  height: auto;
-  display: block;
+    max-width: 90%;
+    height: auto;
+    display: block;
 }
